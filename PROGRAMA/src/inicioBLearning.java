@@ -1,0 +1,55 @@
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+
+public class inicioBLearning {
+
+    @FXML
+    private Button contenido;
+
+    @FXML
+    private Button contacto;
+
+    @FXML
+    private Button horario;
+
+    @FXML
+    private Button notas;
+
+    @FXML
+    private Button calendario;
+
+    @FXML
+    private Button perfil;
+
+    @FXML
+    void handlerContenido(ActionEvent event) {
+
+    }
+
+    @FXML
+    void handlerHorario(ActionEvent event) {
+
+    }
+
+    @FXML
+    void handlerContacto(ActionEvent event) {
+
+    }
+
+    @FXML
+    void handlerNotas(ActionEvent event) {
+
+    }
+
+    @FXML
+    void handlerCalendario(ActionEvent event) {
+
+    }
+
+    @FXML
+    void handlerPerfil(ActionEvent event) {
+
+    }
+
+}
