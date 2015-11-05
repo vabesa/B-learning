@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="186.0" layoutY="50.0" prefHeight="97.0" prefWidth="632.0" text="B-LEARNING">
+         <font>
+            <Font name="System Bold" size="46.0" />
+         </font>
+      </Label>
+      <Separator layoutX="6.0" layoutY="151.0" prefHeight="1.0" prefWidth="1272.0" />
+      <Button fx:id="contenido" layoutX="69.0" layoutY="188.0" mnemonicParsing="false" onAction="#handlerContenido" prefHeight="33.0" prefWidth="127.0" text="CONTENIDO" />
+      <Button fx:id="horario" layoutX="577.0" layoutY="188.0" mnemonicParsing="false" onAction="#handlerHorario" prefHeight="33.0" prefWidth="127.0" text="HORARIO" />
+      <Button fx:id="contacto" layoutX="450.0" layoutY="188.0" mnemonicParsing="false" onAction="#handlerContacto" prefHeight="33.0" prefWidth="127.0" text="CONTACTO" />
+      <Button fx:id="notas" layoutX="196.0" layoutY="188.0" mnemonicParsing="false" onAction="#handlerNotas" prefHeight="33.0" prefWidth="127.0" text="NOTAS" />
+      <Button fx:id="calendario" layoutX="323.0" layoutY="188.0" mnemonicParsing="false" onAction="#handlerCalendario" prefHeight="33.0" prefWidth="127.0" text="CALENDARIO" />
+      <Button fx:id="perfil" layoutX="956.0" layoutY="185.0" mnemonicParsing="false" onAction="#handlerPerfil" prefHeight="39.0" prefWidth="127.0" text="MI PERFIL" />
+      <Label layoutX="139.0" layoutY="304.0" prefHeight="33.0" prefWidth="127.0" text="CURSO:" />
+      <Label layoutX="138.0" layoutY="341.0" prefHeight="33.0" prefWidth="53.0" text="TOPICO:" />
+      <ComboBox fx:id="cursos" layoutX="202.0" layoutY="304.0" prefHeight="33.0" prefWidth="185.0" promptText="cursos" />
+      <ComboBox fx:id="topicos" layoutX="202.0" layoutY="341.0" prefHeight="33.0" prefWidth="185.0" promptText="topicos" />
+      <Button fx:id="buscar" layoutX="302.0" layoutY="393.0" mnemonicParsing="false" onAction="#handlerBuscar" prefHeight="33.0" prefWidth="85.0" text="BUSCAR" />
+      <Separator layoutX="125.0" layoutY="440.0" prefHeight="3.0" prefWidth="299.0" />
+      <Separator layoutX="125.0" layoutY="286.0" prefHeight="3.0" prefWidth="299.0" />
+      <Label layoutX="472.0" layoutY="286.0" prefHeight="78.0" prefWidth="222.0" text="cuando poni buscar aparece aca el video " />
+      <Label layoutX="466.0" layoutY="335.0" prefHeight="78.0" prefWidth="222.0" text="del curso y materia q elegiste" />
+   </children>
+</AnchorPane>
