@@ -37,5 +37,6 @@
          </font>
       </Label>
       <Button fx:id="okcurso" layoutX="437.0" layoutY="175.0" mnemonicParsing="false" onAction="#handlerOK" prefHeight="25.0" prefWidth="73.0" text="OK" />
+      <Button fx:id="lista" layoutX="705.0" layoutY="258.0" mnemonicParsing="false" onAction="#handlerLista" prefHeight="33.0" prefWidth="127.0" text="ver Lista" />
    </children>
 </AnchorPane>

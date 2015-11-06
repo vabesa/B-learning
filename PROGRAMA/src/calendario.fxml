@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.image.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="contenidoBLearning">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="186.0" layoutY="50.0" prefHeight="97.0" prefWidth="632.0" text="B-LEARNING">
          <font>
@@ -20,13 +19,19 @@
       <Button fx:id="notas" layoutX="196.0" layoutY="188.0" mnemonicParsing="false" onAction="#handlerNotas" prefHeight="33.0" prefWidth="127.0" text="NOTAS" />
       <Button fx:id="calendario" layoutX="323.0" layoutY="188.0" mnemonicParsing="false" onAction="#handlerCalendario" prefHeight="33.0" prefWidth="127.0" text="CALENDARIO" />
       <Button fx:id="perfil" layoutX="956.0" layoutY="185.0" mnemonicParsing="false" onAction="#handlerPerfil" prefHeight="39.0" prefWidth="127.0" text="MI PERFIL" />
-      <Label layoutX="139.0" layoutY="304.0" prefHeight="33.0" prefWidth="127.0" text="CURSO:" />
-      <Label layoutX="138.0" layoutY="341.0" prefHeight="33.0" prefWidth="53.0" text="TOPICO:" />
-      <ComboBox fx:id="cursos" layoutX="202.0" layoutY="304.0" prefHeight="33.0" prefWidth="185.0" promptText="cursos" />
-      <ComboBox fx:id="topicos" layoutX="202.0" layoutY="341.0" prefHeight="33.0" prefWidth="185.0" promptText="topicos" />
-      <Button fx:id="buscar" layoutX="302.0" layoutY="393.0" mnemonicParsing="false" onAction="#handlerBuscar" prefHeight="33.0" prefWidth="85.0" text="BUSCAR" />
-      <Separator layoutX="125.0" layoutY="440.0" prefHeight="3.0" prefWidth="299.0" />
-      <Separator layoutX="125.0" layoutY="286.0" prefHeight="3.0" prefWidth="299.0" />
       <Button fx:id="cerrar" layoutX="1083.0" layoutY="185.0" mnemonicParsing="false" onAction="#handlerCerrar" prefHeight="39.0" prefWidth="127.0" text="CERRAR CESION" />
+      <ComboBox fx:id="mes" layoutX="414.0" layoutY="284.0" prefWidth="150.0" promptText="MES" />
+      <TableView layoutX="69.0" layoutY="332.0" prefHeight="374.0" prefWidth="840.0">
+        <columns>
+          <TableColumn fx:id="lunes" prefWidth="120.0" text="Lunes" />
+          <TableColumn fx:id="martes" prefWidth="120.0" text="Martes" />
+            <TableColumn fx:id="miercoles" prefWidth="120.0" text="Miercoles" />
+            <TableColumn fx:id="jueves" prefWidth="120.0" text="Jueves" />
+            <TableColumn fx:id="viernes" minWidth="0.0" prefWidth="120.0" text="Viernes" />
+            <TableColumn fx:id="sabado" prefWidth="120.0" text="Sabado" />
+            <TableColumn fx:id="domingo" prefWidth="120.0" text="Domingo" />
+        </columns>
+      </TableView>
+      <DatePicker layoutX="598.0" layoutY="284.0" />
    </children>
 </AnchorPane>

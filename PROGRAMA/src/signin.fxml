@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="nombre_usado" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="186.0" layoutY="50.0" prefHeight="97.0" prefWidth="632.0" text="BIENVENIDO A B-LEARNING">
+         <font>
+            <Font name="System Bold" size="46.0" />
+         </font>
+      </Label>
+      <Separator layoutX="6.0" layoutY="151.0" prefHeight="1.0" prefWidth="1272.0" />
+      <TextField fx:id="colegio" layoutX="186.0" layoutY="310.0" prefHeight="50.0" prefWidth="418.0" promptText="Colegio" />
+      <Button fx:id="signin" layoutX="186.0" layoutY="591.0" mnemonicParsing="false" onAction="#handlerSignIn" prefHeight="50.0" prefWidth="418.0" text="REGISTRAR">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Button>
+      <Label layoutX="115.0" layoutY="228.0" prefHeight="50.0" prefWidth="418.0" text="Hola">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="115.0" layoutY="260.0" prefHeight="50.0" prefWidth="747.0" text="Por favor rellena estos datos para que te podamos ayudar a mejorar tu rendimiento academico.">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="nombre" layoutX="186.0" layoutY="228.0" prefHeight="50.0" prefWidth="418.0" text="NOMBRE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="año_ingreso" layoutX="186.0" layoutY="360.0" prefHeight="50.0" prefWidth="418.0" promptText="Año Ingreso" />
+      <ComboBox fx:id="curso" layoutX="186.0" layoutY="410.0" prefHeight="50.0" prefWidth="418.0" promptText="Curso" />
+      <ComboBox fx:id="promedio" layoutX="186.0" layoutY="460.0" prefHeight="50.0" prefWidth="418.0" promptText="Promedio de notas" />
+      <ComboBox fx:id="curso_problema" layoutX="186.0" layoutY="510.0" prefHeight="50.0" prefWidth="418.0" promptText="Curso en el que mas problemas tengo" />
+      <Label layoutX="678.0" layoutY="391.0" prefHeight="39.0" prefWidth="462.0" text="Mas adelante podras seguir personalizando">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="678.0" layoutY="430.0" prefHeight="39.0" prefWidth="475.0" text="tu perfil para lograr un apoyo mas eficiente">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="678.0" layoutY="486.0" prefHeight="39.0" prefWidth="475.0" text="de parte de">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="818.0" layoutY="457.0" prefHeight="97.0" prefWidth="632.0" text="B-LEARNING">
+         <font>
+            <Font name="System Bold" size="46.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
