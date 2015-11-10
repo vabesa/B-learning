@@ -4,8 +4,16 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.MediaView;
 
 public class contenidoBLearning {
+	
+
+    @FXML
+    private MediaView mediaViw;
+	
     @FXML
     private ComboBox<?> cursos;
 
@@ -72,7 +80,13 @@ public class contenidoBLearning {
 
     @FXML
     void handlerBuscar(ActionEvent event) {
-
+    	Media musicfile = new Media("file:///C:/Users/Vicente%20Besa/Documents/cancion.mp3");
+    	Media videofile = new Media("file:///C:/Users/Vicente%20Besa/Documents/video.mp4");
+    	MediaPlayer mediaplayer = new MediaPlayer(videofile);
+    	mediaViw.setMediaPlayer(mediaplayer);
+    	mediaplayer.play();
+    	
+    
     }
 
     @FXML
