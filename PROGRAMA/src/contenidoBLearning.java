@@ -1,5 +1,11 @@
 import java.util.ArrayList;
 
+import backend.Curso;
+import backend.Nivel;
+import backend.Sistema;
+import backend.Topico;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -10,6 +16,7 @@ import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
 
 public class contenidoBLearning {
+	public Nivel nivel;
 	MediaPlayer mediaplayer;
     @FXML
     private VBox vboxql;
@@ -18,7 +25,7 @@ public class contenidoBLearning {
     private MediaView mediaViw;
 	
     @FXML
-    private ComboBox<?> cursos;
+    private ComboBox<String> cursos;
 
     @FXML
     private Button contenido;
@@ -42,7 +49,7 @@ public class contenidoBLearning {
     private Button calendario;
 
     @FXML
-    private ComboBox<?> topicos;
+    private ComboBox<String> topicos;
 
     @FXML
     private Button perfil;
@@ -83,8 +90,16 @@ public class contenidoBLearning {
 
     @FXML
     void handlerBuscar(ActionEvent event) {
+    	String ruta = "file:///C:/Users/Vicente%20Besa/Videos/DivX%20Movies/video.mp4";
+    	for (Curso c:nivel.getCursos()){
+    		for (Topico t:c.getTopicos()){
+    			if (t.nombre.equals(topicos.getValue())){
+    				ruta = t.ruta;
+    			}
+    		}
+    	}
     	Media musicfile = new Media("file:///C:/Users/Vicente%20Besa/Documents/cancion.mp3");
-    	Media videofile = new Media("file:///C:/Users/Vicente%20Besa/Videos/DivX%20Movies/video.mp4");
+    	Media videofile = new Media(ruta);
     	mediaplayer = new MediaPlayer(videofile);
     	mediaViw.setMediaPlayer(mediaplayer);
     	mediaViw.toFront();
@@ -102,7 +117,34 @@ public class contenidoBLearning {
     }
     
     public void initialize(){
-    	System.out.println("buena");
+    	System.out.println(mainGui.alumno_en_linea.getNombre());
+    	for (Nivel n: Sistema.getINSTANCE().getNiveles()){
+    		if (n.equals(mainGui.alumno_en_linea.getNivel())){
+    			this.nivel=n;
+    		}
+			
+		}
+    	cursos.getItems().clear();
+    	for (Curso c: this.nivel.cursos){
+    		cursos.getItems().addAll(c.nombre);
+    	}
+    	cursos.valueProperty().addListener(new ChangeListener<String>(){
+			@Override
+			public void changed(ObservableValue<? extends String>arg0,String antes,
+					String despues){
+				topicos.getItems().clear();
+				for (Nivel n: Sistema.getINSTANCE().getNiveles()){
+					for (Curso c:n.getCursos()){
+						if (c.getNombre().equals(despues)){
+							for (Topico t:c.getTopicos()){
+								topicos.getItems().addAll(t.nombre);
+							}
+						}
+					}
+				}
+			}
+		});
+    	
     }
 
 }

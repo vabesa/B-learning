@@ -25,6 +25,7 @@ public class inicioBLearning {
     @FXML
     void handlerContenido(ActionEvent event) {
     	mainGui.primaryStage.setScene(mainGui.scene_contenido);
+    	mainGui.contenido_bl.initialize();
 
     }
 

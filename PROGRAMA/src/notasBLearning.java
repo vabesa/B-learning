@@ -74,6 +74,12 @@ public class notasBLearning {
     	curso.setCellValueFactory(
                 new PropertyValueFactory<Nota, String>("Materia"));
 
+    	//for (Nota n: mainGui.alumno_en_linea.getNotas()){
+    		//data.add(n);
+    	data.add(new Nota("matematicas"));
+    	data.get(0);
+    	curso.setCellValueFactory(
+                new PropertyValueFactory<Nota, String>("Materia"));
     	for (Nota n: mainGui.alumno_en_linea.getNotas()){
     		data.add(n);
     	}
