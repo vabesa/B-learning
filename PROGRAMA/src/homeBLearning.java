@@ -29,6 +29,11 @@ public class homeBLearning {
 
     @FXML
     void handlerLogIn(ActionEvent event) {
+    	if (usertextlog.getText().equals("profe")){
+    		mainGui.primaryStage.setScene(mainGui.scene_inicioprofe);
+    	}else{
+    		mainGui.primaryStage.setScene(mainGui.scene_inicio);
+    	}
 
     }
 

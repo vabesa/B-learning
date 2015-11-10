@@ -1,8 +1,13 @@
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.ListView;
 
-public class inicioBLearning {
+public class verlistaprofeBLearning {
+
+    @FXML
+    private ListView<?> lista;
 
     @FXML
     private Button contenido;
@@ -14,7 +19,19 @@ public class inicioBLearning {
     private Button horario;
 
     @FXML
+    private Button okcurso;
+
+    @FXML
+    private ComboBox<?> curso;
+
+    @FXML
     private Button notas;
+
+    @FXML
+    private Button cerrar;
+
+    @FXML
+    private Button verLista;
 
     @FXML
     private Button calendario;
@@ -24,37 +41,46 @@ public class inicioBLearning {
 
     @FXML
     void handlerContenido(ActionEvent event) {
-    	mainGui.primaryStage.setScene(mainGui.scene_contenido);
 
     }
 
     @FXML
     void handlerHorario(ActionEvent event) {
-    	mainGui.primaryStage.setScene(mainGui.scene_horario);
 
     }
 
     @FXML
     void handlerContacto(ActionEvent event) {
-    	mainGui.primaryStage.setScene(mainGui.scene_enviarmsj);
 
     }
 
     @FXML
     void handlerNotas(ActionEvent event) {
-    	mainGui.primaryStage.setScene(mainGui.scene_notas);
 
     }
 
     @FXML
     void handlerCalendario(ActionEvent event) {
-    	mainGui.primaryStage.setScene(mainGui.scene_calendario);
 
     }
 
     @FXML
     void handlerPerfil(ActionEvent event) {
-    	
+
+    }
+
+    @FXML
+    void handlerCerrar(ActionEvent event) {
+
+    }
+
+    @FXML
+    void handlerOK(ActionEvent event) {
+
+    }
+
+    @FXML
+    void handlerVerLista(ActionEvent event) {
 
     }
 

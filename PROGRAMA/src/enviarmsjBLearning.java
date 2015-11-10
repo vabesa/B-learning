@@ -1,8 +1,11 @@
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 
-public class inicioBLearning {
+public class enviarmsjBLearning {
 
     @FXML
     private Button contenido;
@@ -11,16 +14,31 @@ public class inicioBLearning {
     private Button contacto;
 
     @FXML
+    private Button enviar;
+
+    @FXML
     private Button horario;
 
     @FXML
     private Button notas;
 
     @FXML
+    private Button cerrar;
+
+    @FXML
+    private TextField asunto;
+
+    @FXML
     private Button calendario;
 
     @FXML
+    private TextArea mensaje;
+
+    @FXML
     private Button perfil;
+
+    @FXML
+    private ComboBox<?> destinatario;
 
     @FXML
     void handlerContenido(ActionEvent event) {
@@ -54,7 +72,17 @@ public class inicioBLearning {
 
     @FXML
     void handlerPerfil(ActionEvent event) {
-    	
+
+    }
+
+    @FXML
+    void handlerCerrar(ActionEvent event) {
+    	mainGui.primaryStage.setScene(mainGui.scene_home);
+
+    }
+
+    @FXML
+    void handlerEnviar(ActionEvent event) {
 
     }
 

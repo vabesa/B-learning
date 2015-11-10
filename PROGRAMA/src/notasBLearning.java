@@ -1,8 +1,9 @@
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 
-public class inicioBLearning {
+public class notasBLearning {
 
     @FXML
     private Button contenido;
@@ -14,7 +15,13 @@ public class inicioBLearning {
     private Button horario;
 
     @FXML
+    private ComboBox<?> year;
+
+    @FXML
     private Button notas;
+
+    @FXML
+    private Button cerrar;
 
     @FXML
     private Button calendario;
@@ -54,7 +61,12 @@ public class inicioBLearning {
 
     @FXML
     void handlerPerfil(ActionEvent event) {
-    	
+
+    }
+
+    @FXML
+    void handlerCerrar(ActionEvent event) {
+    	mainGui.primaryStage.setScene(mainGui.scene_home);
 
     }
 
