@@ -2,10 +2,15 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 
-public class calendarioBLearning {
+public class notasprofeBLearning {
+
+    @FXML
+    private TextField descripcion;
+
+    @FXML
+    private ComboBox<?> nota1;
 
     @FXML
     private Button contenido;
@@ -17,10 +22,7 @@ public class calendarioBLearning {
     private Button horario;
 
     @FXML
-    private TableColumn<?, ?> domingo;
-
-    @FXML
-    private TableColumn<?, ?> miercoles;
+    private ComboBox<?> nota2;
 
     @FXML
     private Button notas;
@@ -29,59 +31,52 @@ public class calendarioBLearning {
     private Button cerrar;
 
     @FXML
-    private TableColumn<?, ?> martes;
-
-    @FXML
-    private TableColumn<?, ?> jueves;
+    private Button verLista;
 
     @FXML
     private Button calendario;
 
     @FXML
-    private TableColumn<?, ?> viernes;
+    private ComboBox<?> alumno;
 
     @FXML
     private Button perfil;
 
     @FXML
-    private ComboBox<?> mes;
+    private Button okcurso;
 
     @FXML
-    private TableView<?> tabla;
+    private Button subirNota;
 
     @FXML
-    private TableColumn<?, ?> sabado;
-
-    @FXML
-    private TableColumn<?, ?> lunes;
+    private ComboBox<?> curso;
 
     @FXML
     void handlerContenido(ActionEvent event) {
-    	mainGui.primaryStage.setScene(mainGui.scene_contenido);
 
     }
 
     @FXML
     void handlerHorario(ActionEvent event) {
-    	mainGui.primaryStage.setScene(mainGui.scene_horario);
+    	mainGui.primaryStage.setScene(mainGui.scene_horarioprofe);
 
     }
 
     @FXML
     void handlerContacto(ActionEvent event) {
-    	mainGui.primaryStage.setScene(mainGui.scene_enviarmsj);
+    	mainGui.primaryStage.setScene(mainGui.scene_mensajeprofe);
 
     }
 
     @FXML
     void handlerNotas(ActionEvent event) {
-    	mainGui.primaryStage.setScene(mainGui.scene_notas);
+    	mainGui.primaryStage.setScene(mainGui.scene_notasprofe);
 
     }
 
     @FXML
     void handlerCalendario(ActionEvent event) {
-    	mainGui.primaryStage.setScene(mainGui.scene_calendario);
+    	mainGui.primaryStage.setScene(mainGui.scene_calendarioprofe);
 
     }
 
@@ -93,6 +88,21 @@ public class calendarioBLearning {
     @FXML
     void handlerCerrar(ActionEvent event) {
     	mainGui.primaryStage.setScene(mainGui.scene_home);
+
+    }
+
+    @FXML
+    void handlerOK(ActionEvent event) {
+
+    }
+
+    @FXML
+    void handlerVerLista(ActionEvent event) {
+
+    }
+
+    @FXML
+    void handlerSubirNota(ActionEvent event) {
 
     }
 

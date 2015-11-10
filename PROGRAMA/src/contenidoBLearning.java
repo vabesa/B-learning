@@ -43,21 +43,25 @@ public class contenidoBLearning {
 
     @FXML
     void handlerHorario(ActionEvent event) {
+    	mainGui.primaryStage.setScene(mainGui.scene_horario);
 
     }
 
     @FXML
     void handlerContacto(ActionEvent event) {
+    	mainGui.primaryStage.setScene(mainGui.scene_enviarmsj);
 
     }
 
     @FXML
     void handlerNotas(ActionEvent event) {
+    	mainGui.primaryStage.setScene(mainGui.scene_notas);
 
     }
 
     @FXML
     void handlerCalendario(ActionEvent event) {
+    	mainGui.primaryStage.setScene(mainGui.scene_calendario);
 
     }
 
@@ -73,6 +77,7 @@ public class contenidoBLearning {
 
     @FXML
     void handlerCerrar(ActionEvent event) {
+    	mainGui.primaryStage.setScene(mainGui.scene_home);
 
     }
 
