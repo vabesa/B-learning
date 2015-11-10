@@ -20,7 +20,7 @@
       <Button fx:id="calendario" layoutX="323.0" layoutY="188.0" mnemonicParsing="false" onAction="#handlerCalendario" prefHeight="33.0" prefWidth="127.0" text="CALENDARIO" />
       <Button fx:id="perfil" layoutX="956.0" layoutY="185.0" mnemonicParsing="false" onAction="#handlerPerfil" prefHeight="39.0" prefWidth="127.0" text="MI PERFIL" />
       <Button fx:id="cerrar" layoutX="1083.0" layoutY="185.0" mnemonicParsing="false" onAction="#handlerCerrar" prefHeight="39.0" prefWidth="127.0" text="CERRAR CESION" />
-      <ComboBox fx:id="mes" layoutX="414.0" layoutY="284.0" prefWidth="150.0" promptText="MES" />
+      <ComboBox fx:id="mes" layoutX="414.0" layoutY="284.0" onAction="#handlerMes" prefWidth="150.0" promptText="MES" />
       <TableView fx:id="tabla" layoutX="63.0" layoutY="346.0" prefHeight="374.0" prefWidth="840.0">
         <columns>
           <TableColumn fx:id="lunes" prefWidth="120.0" text="Lunes" />

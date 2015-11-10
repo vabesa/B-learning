@@ -10,8 +10,26 @@ public class Nivel {
 		this.cursos = new ArrayList<Curso>();
 		this.alumnos = new ArrayList<Alumno>();
 		this.semanas = new ArrayList<Semana>();
-
+		this.meses = new ArrayList<String>();
+		this.meses.add("Enero");//"Febrero","Marzo","Abril","Junio","Julio","Agosto","Septiembre","Noviembre","Diciembre")
+		this.meses.add("Febrero");
+		this.meses.add("Marzo");
+		this.meses.add("Abril");
+		this.meses.add("Mayo");
+		this.meses.add("Junio");
+		this.meses.add("Julio");
+		this.meses.add("Agosto");
+		this.meses.add("Septiembre");
+		this.meses.add("Octubre");
+		this.meses.add("Noviembre");
+		this.meses.add("Diciembre");
+		for (String s: this.meses){
+			for (int i=1;i<5;i++){
+				this.semanas.add(new Semana(i, s, "","hola","","","","",""));
+			}
+		}
 	}
+	public ArrayList<String> meses;
 	public ArrayList<Semana> semanas;
 	public String nombre;
 	public ArrayList<Curso> cursos;

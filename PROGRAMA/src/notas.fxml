@@ -23,17 +23,12 @@
       <Button fx:id="calendario" layoutX="323.0" layoutY="188.0" mnemonicParsing="false" onAction="#handlerCalendario" prefHeight="33.0" prefWidth="127.0" text="CALENDARIO" />
       <Button fx:id="perfil" layoutX="956.0" layoutY="185.0" mnemonicParsing="false" onAction="#handlerPerfil" prefHeight="39.0" prefWidth="127.0" text="MI PERFIL" />
       <Button fx:id="cerrar" layoutX="1083.0" layoutY="185.0" mnemonicParsing="false" onAction="#handlerCerrar" prefHeight="39.0" prefWidth="127.0" text="CERRAR CESION" />
-      <ComboBox fx:id="year" layoutX="69.0" layoutY="297.0" prefWidth="150.0" promptText="AÑO" />
-      <TableView layoutX="69.0" layoutY="369.0" prefHeight="200.0" prefWidth="700.0">
+      <ComboBox fx:id="year" layoutX="69.0" layoutY="297.0" onAction="#handlerAno" prefWidth="150.0" promptText="AÑO" />
+      <TableView fx:id="table" layoutX="69.0" layoutY="369.0" prefHeight="200.0" prefWidth="700.0">
         <columns>
-          <TableColumn prefWidth="100.0" text="Matematicas" />
-            <TableColumn prefWidth="100.0" text="Lenguaje" />
-            <TableColumn prefWidth="100.0" text="Ciencias" />
-            <TableColumn prefWidth="100.0" text="Historia" />
-            <TableColumn prefWidth="100.0" text="Educacion Fisica" />
-            <TableColumn prefWidth="100.0" text="Ingles" />
-            <TableColumn prefWidth="100.0" text="Tecnologia" />
-            <TableColumn prefWidth="100.0" text="C1" />
+          <TableColumn fx:id="curso" prefWidth="233.0" text="Curso" />
+            <TableColumn fx:id="tusnotas" prefWidth="234.0" text="Notas" />
+            <TableColumn fx:id="promedio" prefWidth="233.0" text="Promedio" />
         </columns>
       </TableView>
    </children>
