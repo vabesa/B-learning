@@ -44,7 +44,11 @@ public class notasBLearning {
 
     @FXML
     private TableView<Nota> table;
+<<<<<<< HEAD
+    
+=======
 
+>>>>>>> 12280a0933283dbf6a9c5a8d7096ad65c1ac1f46
     @FXML
     private Button perfil;
 
@@ -55,8 +59,12 @@ public class notasBLearning {
 
     @FXML
     public void initialize(){
+<<<<<<< HEAD
+    	
+=======
     	year.getItems().addAll("2015");
 
+>>>>>>> 12280a0933283dbf6a9c5a8d7096ad65c1ac1f46
     }
     @FXML
     void handlerHorario(ActionEvent event) {
@@ -71,11 +79,20 @@ public class notasBLearning {
 
     @FXML
     void handlerAno(ActionEvent event) {
+<<<<<<< HEAD
+    	//for (Nota n: mainGui.alumno_en_linea.getNotas()){
+    		//data.add(n);
+    	data.add(new Nota("matematicas"));
+    	data.get(0);
+    	curso.setCellValueFactory(
+                new PropertyValueFactory<Nota, String>("Materia"));
+=======
     	for (Nota n: mainGui.alumno_en_linea.getNotas()){
     		data.add(n);
     	}
     	curso.setCellValueFactory(
                 new PropertyValueFactory<Nota, String>("Curso"));
+>>>>>>> 12280a0933283dbf6a9c5a8d7096ad65c1ac1f46
     	tusnotas.setCellValueFactory(
                 new PropertyValueFactory<Nota, String>("Notas"));
     	promedio.setCellValueFactory(
