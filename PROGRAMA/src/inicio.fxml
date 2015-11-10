@@ -5,7 +5,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inicioBLearning">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inicioBLearning">
    <children>
       <Label layoutX="186.0" layoutY="50.0" prefHeight="97.0" prefWidth="632.0" text="B-LEARNING">
          <font>
@@ -20,4 +20,4 @@
       <Button fx:id="calendario" layoutX="323.0" layoutY="188.0" mnemonicParsing="false" onAction="#handlerCalendario" prefHeight="33.0" prefWidth="127.0" text="CALENDARIO" />
       <Button fx:id="perfil" layoutX="956.0" layoutY="185.0" mnemonicParsing="false" onAction="#handlerPerfil" prefHeight="39.0" prefWidth="127.0" text="MI PERFIL" />
    </children>
-</fx:root>
+</AnchorPane>
