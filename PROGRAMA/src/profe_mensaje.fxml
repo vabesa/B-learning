@@ -37,5 +37,25 @@
          </font>
       </Label>
       <Button fx:id="okcurso" layoutX="437.0" layoutY="175.0" mnemonicParsing="false" onAction="#handlerOK" prefHeight="25.0" prefWidth="73.0" text="OK" />
+      <Button fx:id="lista" layoutX="705.0" layoutY="258.0" mnemonicParsing="false" onAction="#handlerLista" prefHeight="33.0" prefWidth="127.0" text="ver Lista" />
+      <Button fx:id="enviar" layoutX="695.0" layoutY="687.0" mnemonicParsing="false" onAction="#handlerEnviar" prefHeight="33.0" prefWidth="134.0" text="ENVIAR" />
+      <TextArea fx:id="mensaje" layoutX="188.0" layoutY="434.0" prefHeight="227.0" prefWidth="641.0" />
+      <Label layoutX="73.0" layoutY="434.0" prefHeight="26.0" prefWidth="127.0" text="MENSAJE:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="asunto" layoutX="189.0" layoutY="386.0" prefHeight="25.0" prefWidth="235.0" promptText="asunto" />
+      <Label layoutX="73.0" layoutY="385.0" prefHeight="26.0" prefWidth="127.0" text="ASUNTO:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="destinatario" layoutX="189.0" layoutY="341.0" prefHeight="25.0" prefWidth="235.0" promptText="ej: alumno x, apoderado y,  curso etc..." />
+      <Label layoutX="73.0" layoutY="340.0" prefHeight="26.0" prefWidth="127.0" text="DESTINATARIO:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

@@ -37,5 +37,17 @@
          </font>
       </Label>
       <Button fx:id="okcurso" layoutX="437.0" layoutY="175.0" mnemonicParsing="false" onAction="#handlerOK" prefHeight="25.0" prefWidth="73.0" text="OK" />
+      <Button fx:id="lista" layoutX="705.0" layoutY="258.0" mnemonicParsing="false" onAction="#handlerLista" prefHeight="33.0" prefWidth="127.0" text="ver Lista" />
+      <TableView fx:id="tabla" layoutX="79.0" layoutY="342.0" prefHeight="374.0" prefWidth="840.0">
+         <columns>
+            <TableColumn fx:id="lunes" prefWidth="120.0" text="Lunes" />
+            <TableColumn fx:id="martes" prefWidth="120.0" text="Martes" />
+            <TableColumn fx:id="miercoles" prefWidth="120.0" text="Miercoles" />
+            <TableColumn fx:id="jueves" prefWidth="120.0" text="Jueves" />
+            <TableColumn fx:id="viernes" minWidth="0.0" prefWidth="120.0" text="Viernes" />
+            <TableColumn fx:id="sabado" prefWidth="120.0" text="Sabado" />
+            <TableColumn fx:id="domingo" prefWidth="120.0" text="Domingo" />
+         </columns>
+      </TableView>
    </children>
 </AnchorPane>
