@@ -1,8 +1,10 @@
 
+import backend.Curso;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
@@ -51,7 +53,7 @@ public class horarioprofeBLearning {
     private Button okcurso;
 
     @FXML
-    private ComboBox<?> curso;
+    private ComboBox<String> curso;
 
     @FXML
     private TableView<?> tabla;
@@ -61,6 +63,17 @@ public class horarioprofeBLearning {
 
     @FXML
     private TableColumn<?, ?> lunes;
+
+    @FXML
+    private Label labelcurso;
+
+    @FXML
+    private void initialize(){
+    	labelcurso.setText(mainGui.curso_en_linea.getNombre());
+    	for (Curso c: mainGui.profesor_en_linea.getCursos()){
+    		curso.getItems().addAll(c.getNombre());
+    	}
+    }
 
     @FXML
     void handlerContenido(ActionEvent event) {

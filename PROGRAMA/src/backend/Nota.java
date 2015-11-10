@@ -43,8 +43,11 @@ public class Nota {
 		double suma = 0;
 		int contador = 0;
 		for (double d: this.getListanotas()){
+
 			suma += d;
-			contador += 1;
+			if (d>0){
+				contador += 1;
+			}
 		}
 		this.promedio = suma/contador;
 	}

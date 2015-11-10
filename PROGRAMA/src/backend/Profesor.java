@@ -63,4 +63,10 @@ public class Profesor {
 	public void setCursos(ArrayList<Curso> cursos) {
 		this.cursos = cursos;
 	}
+	public String getCurso() {
+		return curso;
+	}
+	public void setCurso(String curso) {
+		this.curso = curso;
+	}
 }

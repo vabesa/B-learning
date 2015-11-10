@@ -19,8 +19,8 @@ public class Sistema {
 		this.niveles.get(0).getAlumnos().add(new Alumno("Vicente Besa", "13", this.niveles.get(0)));
 		this.niveles.get(1).getAlumnos().add(new Alumno("Jorge Garcia-Huidobro", "14", this.niveles.get(1)));
 		this.niveles.get(0).getAlumnos().add(new Alumno("Juan Pablo Schele", "12", this.niveles.get(0)));
-
-
+		this.profes.get(0).getCursos().add(this.niveles.get(0).getCursos().get(0));
+		this.profes.get(1).getCursos().add(this.niveles.get(1).getCursos().get(0));
 	}
 
 	private static Sistema INSTANCE = new Sistema();

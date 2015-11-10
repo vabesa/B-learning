@@ -1,5 +1,7 @@
 import backend.Alumno;
+import backend.Curso;
 import backend.Profesor;
+import backend.Sistema;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -8,8 +10,9 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 public class mainGui extends Application{
-	public static Alumno alumno_en_linea = null;
-	public static Profesor profesor_en_linea = null;
+	public static Alumno alumno_en_linea = Sistema.getINSTANCE().getNiveles().get(0).getAlumnos().get(0);
+	public static Profesor profesor_en_linea = Sistema.getINSTANCE().getProfes().get(0);
+	public static Curso curso_en_linea = Sistema.getINSTANCE().getProfes().get(0).getCursos().get(0);
 	public static Stage primaryStage;
 
 	public static Parent home_Blearning;

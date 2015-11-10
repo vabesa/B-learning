@@ -1,7 +1,9 @@
 import javafx.fxml.FXML;
+import backend.Curso;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 
 public class inicioprofeBLearning {
 
@@ -21,7 +23,7 @@ public class inicioprofeBLearning {
     private Button okcurso;
 
     @FXML
-    private ComboBox<?> curso;
+    private ComboBox<String> curso;
 
     @FXML
     private Button notas;
@@ -34,6 +36,17 @@ public class inicioprofeBLearning {
 
     @FXML
     private Button perfil;
+    
+    @FXML
+    private Label labelcurso;
+    
+    @FXML
+    private void initialize(){
+    	labelcurso.setText(mainGui.curso_en_linea.getNombre());
+    	for (Curso c: mainGui.profesor_en_linea.getCursos()){
+    		curso.getItems().addAll(c.getNombre());
+    	}
+    }
 
     @FXML
     void handlerContenido(ActionEvent event) {
