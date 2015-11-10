@@ -58,4 +58,10 @@ public class Nivel {
 	public void setSemanas(ArrayList<Semana> semanas) {
 		this.semanas = semanas;
 	}
+	public ArrayList<String> getMeses() {
+		return meses;
+	}
+	public void setMeses(ArrayList<String> meses) {
+		this.meses = meses;
+	}
 }
