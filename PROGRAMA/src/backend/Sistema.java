@@ -14,16 +14,15 @@ public class Sistema {
 		this.profes.add(new Profesor ("Leo", "Lenguaje","clave321","profe2"));
 		this.niveles.get(0).getCursos().add(new Curso(this.niveles.get(0), "Matematicas 7mo", this.profes.get(0)));
 		this.niveles.get(1).getCursos().add(new Curso(this.niveles.get(1), "Lenguaje 8vo", this.profes.get(1)));
-		this.niveles.get(0).getAlumnos().add(new Alumno("Ignacio Toresano", "13", this.niveles.get(0)));
-		this.niveles.get(1).getAlumnos().add(new Alumno("ROlf heerwagen", "33", this.niveles.get(1)));
-		this.niveles.get(0).getAlumnos().add(new Alumno("Vicente Besa", "13", this.niveles.get(0)));
-		this.niveles.get(1).getAlumnos().add(new Alumno("Jorge Garcia-Huidobro", "14", this.niveles.get(1)));
-		this.niveles.get(0).getAlumnos().add(new Alumno("Juan Pablo Schele", "12", this.niveles.get(0)));
-		this.profes.get(0).getCursos().add(this.niveles.get(0).getCursos().get(0));
-		this.profes.get(1).getCursos().add(this.niveles.get(1).getCursos().get(0));
+		this.niveles.get(0).getAlumnos().add(new Alumno("Ignacio Toresano", "13", this.niveles.get(0),"nacho123","itoresano"));
+		this.niveles.get(1).getAlumnos().add(new Alumno("ROlf heerwagen", "33", this.niveles.get(1),"rolf123","rheerwagen"));
+		this.niveles.get(0).getAlumnos().add(new Alumno("Vicente Besa", "13", this.niveles.get(0),"besa123","vabesa"));
+		this.niveles.get(1).getAlumnos().add(new Alumno("Jorge Garcia-Huidobro", "14", this.niveles.get(1),"garcia123","jgarcia"));
+		this.niveles.get(0).getAlumnos().add(new Alumno("Juan Pablo Schele", "12", this.niveles.get(0),"schele123","jpschele"));
 		this.niveles.get(0).getCursos().get(0).topicos.add(new Topico("fracciones",this.niveles.get(0).getCursos().get(0) , "file:///C:/Users/Vicente%20Besa/Videos/DivX%20Movies/video2.mp4"));
 		this.niveles.get(1).getCursos().get(0).topicos.add(new Topico("Figuras literarias",this.niveles.get(1).getCursos().get(0) , "file:///C:/Users/Vicente%20Besa/Videos/DivX%20Movies/video.mp4"));
-
+		this.profes.get(0).getCursos().add(this.niveles.get(0).getCursos().get(0));
+		this.profes.get(1).getCursos().add(this.niveles.get(1).getCursos().get(0));
 
 
 	}
@@ -53,3 +52,5 @@ public class Sistema {
 
 
 }
+
+
