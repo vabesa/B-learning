@@ -4,6 +4,7 @@ public class Topico {
 
 	public String Nombre;
 	public Curso curso;
+	public String ruta;
 
 
 }
