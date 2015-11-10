@@ -4,11 +4,12 @@ import java.util.ArrayList;
 
 public class Alumno {
 
-	public Alumno(String nombre, String edad, Nivel nivel) {
-		super();
+	public Alumno(String nombre, String edad, Nivel nivel, String clave, String usuario) {
 		this.nombre = nombre;
 		this.edad = edad;
 		this.nivel = nivel;
+		this.clave=clave;
+		this.usuario=usuario;
 		this.notas = new ArrayList<Nota>();
 		for (Curso c: nivel.getCursos()){
 			this.notas.add(new Nota(c.getNombre()));
@@ -18,6 +19,20 @@ public class Alumno {
 	String nombre;
 	String edad;
 	Nivel nivel;
+	public String getUsuario() {
+		return usuario;
+	}
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
+	}
+	public String getClave() {
+		return clave;
+	}
+	public void setClave(String clave) {
+		this.clave = clave;
+	}
+	String usuario;
+	String clave;
 	ArrayList<Nota> notas;
 	ArrayList<Modulo> horario;
 	public String getNombre() {
