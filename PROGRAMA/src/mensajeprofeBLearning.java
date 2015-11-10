@@ -32,7 +32,7 @@ public class mensajeprofeBLearning {
     private Button perfil;
 
     @FXML
-    private ComboBox<?> destinatario;
+    private ComboBox<String> destinatario;
 
     @FXML
     private Button enviar;
@@ -41,7 +41,7 @@ public class mensajeprofeBLearning {
     private Button okcurso;
 
     @FXML
-    private ComboBox<?> curso;
+    private ComboBox<String> curso;
 
     @FXML
     private TextField asunto;

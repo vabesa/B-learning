@@ -1,3 +1,4 @@
+import backend.Curso;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -38,8 +39,16 @@ public class enviarmsjBLearning {
     private Button perfil;
 
     @FXML
-    private ComboBox<?> destinatario;
-
+    private ComboBox<String> destinatario;
+    @FXML
+    public void initialize(){
+    	//mostardest();
+    }
+    public void mostardest(){
+    	for (Curso c: mainGui.alumno_en_linea.getNivel().getCursos()){
+    		destinatario.getItems().add(c.profesor.getNombre());
+    	}
+    }
     @FXML
     void handlerContenido(ActionEvent event) {
     	mainGui.primaryStage.setScene(mainGui.scene_contenido);
@@ -83,7 +92,8 @@ public class enviarmsjBLearning {
 
     @FXML
     void handlerEnviar(ActionEvent event) {
-
+    	mensaje.clear();
+    	asunto.clear();
     }
 
 }

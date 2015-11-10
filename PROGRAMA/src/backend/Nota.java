@@ -1,12 +1,14 @@
 package backend;
 
 public class Nota {
-	public Nota(String curso) {
+	public Nota(String Curso) {
 		super();
-		this.curso = curso;
+		this.curso = Curso;
 		this.notas = "";
 		this.listanotas = new double[100];
 		this.contadorlista = 0;
+		this.promedio = 0;
+		this.promedio_string = "0";
 
 	}
 	public String curso;
