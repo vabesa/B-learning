@@ -29,7 +29,15 @@ public class homeBLearning {
 
     @FXML
     void handlerLogIn(ActionEvent event) {
-    	mainGui.primaryStage.setScene(mainGui.scene_inicio);
+    	String nombre_usuario = usertextlog.getText();
+    	String clave = passlog.getText();
+    	System.out.println(passlog.getText());
+    	if (Alumno.ingresar_usuario(nombre_usuario, clave)){
+    		Alumno usuario = Alumno.getUsuario(nombre_usuario, clave);
+    		System.out.println(usuario.getClass());
+    		mainGui.alumno_enlinea=usuario;
+    		mainGui.primaryStage.setScene(mainGui.scene_inicio);
+    	}
 
     }
 
