@@ -1,4 +1,5 @@
 import backend.Alumno;
+import backend.Profesor;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -8,6 +9,7 @@ import javafx.stage.Stage;
 
 public class mainGui extends Application{
 	public static Alumno alumno_en_linea = null;
+	public static Profesor profesor_en_linea = null;
 	public static Stage primaryStage;
 
 	public static Parent home_Blearning;

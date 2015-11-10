@@ -22,7 +22,7 @@ public class notasprofeBLearning {
     private Button horario;
 
     @FXML
-    private ComboBox<?> nota2;
+    private ComboBox<String> nota2;
 
     @FXML
     private Button notas;
@@ -37,7 +37,7 @@ public class notasprofeBLearning {
     private Button calendario;
 
     @FXML
-    private ComboBox<?> alumno;
+    private ComboBox<String> alumno;
 
     @FXML
     private Button perfil;
@@ -49,8 +49,12 @@ public class notasprofeBLearning {
     private Button subirNota;
 
     @FXML
-    private ComboBox<?> curso;
+    private ComboBox<String> curso;
 
+    @FXML
+    public void initialize(){
+
+    }
     @FXML
     void handlerContenido(ActionEvent event) {
 

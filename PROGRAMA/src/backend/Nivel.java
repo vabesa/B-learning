@@ -25,7 +25,7 @@ public class Nivel {
 		this.meses.add("Diciembre");
 		for (String s: this.meses){
 			for (int i=1;i<5;i++){
-				this.semanas.add(new Semana(i, s, "","hola","","","","",""));
+				this.semanas.add(new Semana(i, s, "","","","","","",""));
 			}
 		}
 	}

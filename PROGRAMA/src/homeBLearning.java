@@ -1,3 +1,4 @@
+import backend.Sistema;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -33,6 +34,8 @@ public class homeBLearning {
     		mainGui.primaryStage.setScene(mainGui.scene_inicioprofe);
     	}else{
     		mainGui.primaryStage.setScene(mainGui.scene_inicio);
+    		mainGui.alumno_en_linea = Sistema.getINSTANCE().getNiveles().get(0).getAlumnos().get(0);
+    		
     	}
 
     }

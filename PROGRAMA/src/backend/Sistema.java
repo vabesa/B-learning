@@ -22,6 +22,9 @@ public class Sistema {
 
 
 	}
+
+	private static Sistema INSTANCE = new Sistema();
+
 	public ArrayList<Nivel> niveles;
 	public ArrayList<Profesor> profes;
 	public ArrayList<Nivel> getNiveles() {
@@ -35,6 +38,12 @@ public class Sistema {
 	}
 	public void setProfes(ArrayList<Profesor> profes) {
 		this.profes = profes;
+	}
+	public static Sistema getINSTANCE() {
+		return INSTANCE;
+	}
+	public static void setINSTANCE(Sistema iNSTANCE) {
+		INSTANCE = iNSTANCE;
 	}
 
 
