@@ -24,6 +24,11 @@ public class mainGui extends Application{
 	public static contenidoBLearning contenido_bl;
 	public static Scene scene_contenido;
 	
+	public static Parent calendario_Blearning;
+	public static FXMLLoader loader_calendario = new FXMLLoader();
+	public static calendarioBLearning calendario_bl;
+	public static Scene scene_calendario;
+	
 	public static void main(String[] args){
 		Alumno usuario = new Alumno("victor",9,"jkeqjq","vbesa","victor123");
 		Alumno usuario2 = new Alumno("otro",10,"jknjnfj","otro1","123456");
@@ -48,6 +53,11 @@ public class mainGui extends Application{
 		contenido_Blearning = (Parent) loader_contenido.load();
 		contenido_bl = loader_contenido.getController();
 		scene_contenido = new Scene(contenido_Blearning);
+		
+		loader_calendario.setLocation(mainGui.class.getResource("calendario.fxml"));
+		calendario_Blearning = (Parent) loader_calendario.load();
+		calendario_bl = loader_calendario.getController();
+		scene_calendario = new Scene(calendario_Blearning);
 		
 	}
 	

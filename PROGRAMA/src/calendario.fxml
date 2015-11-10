@@ -5,7 +5,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calendarioBLearning">
    <children>
       <Label layoutX="186.0" layoutY="50.0" prefHeight="97.0" prefWidth="632.0" text="B-LEARNING">
          <font>
@@ -21,7 +21,7 @@
       <Button fx:id="perfil" layoutX="956.0" layoutY="185.0" mnemonicParsing="false" onAction="#handlerPerfil" prefHeight="39.0" prefWidth="127.0" text="MI PERFIL" />
       <Button fx:id="cerrar" layoutX="1083.0" layoutY="185.0" mnemonicParsing="false" onAction="#handlerCerrar" prefHeight="39.0" prefWidth="127.0" text="CERRAR CESION" />
       <ComboBox fx:id="mes" layoutX="414.0" layoutY="284.0" prefWidth="150.0" promptText="MES" />
-      <TableView fx:id="tabla" layoutX="69.0" layoutY="332.0" prefHeight="374.0" prefWidth="840.0">
+      <TableView fx:id="tabla" layoutX="63.0" layoutY="346.0" prefHeight="374.0" prefWidth="840.0">
         <columns>
           <TableColumn fx:id="lunes" prefWidth="120.0" text="Lunes" />
           <TableColumn fx:id="martes" prefWidth="120.0" text="Martes" />
