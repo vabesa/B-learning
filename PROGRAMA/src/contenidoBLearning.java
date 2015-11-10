@@ -1,10 +1,11 @@
+import java.util.ArrayList;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 
 public class contenidoBLearning {
-
     @FXML
     private ComboBox<?> cursos;
 
@@ -22,6 +23,9 @@ public class contenidoBLearning {
 
     @FXML
     private Button notas;
+
+    @FXML
+    private Button cerrar;
 
     @FXML
     private Button calendario;
@@ -68,8 +72,9 @@ public class contenidoBLearning {
     }
 
     @FXML
-    void handlerCancelar(){
+    void handlerCerrar(ActionEvent event) {
 
     }
 
 }
+

@@ -6,7 +6,6 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 public class mainGui extends Application{
-	public static Alumno alumno_enlinea = null;
 	public static Stage primaryStage;
 	
 	public static Parent home_Blearning;
@@ -30,8 +29,6 @@ public class mainGui extends Application{
 	public static Scene scene_calendario;
 	
 	public static void main(String[] args){
-		Alumno usuario = new Alumno("victor",9,"jkeqjq","vbesa","victor123");
-		Alumno usuario2 = new Alumno("otro",10,"jknjnfj","otro1","123456");
 		launch(args);
 		
 	}
