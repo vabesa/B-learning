@@ -31,13 +31,17 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="206.0" layoutY="212.0" prefHeight="24.0" prefWidth="136.0" text="NINGUNO">
+      <Label fx:id="labelcurso" layoutX="206.0" layoutY="212.0" prefHeight="24.0" prefWidth="136.0" text="NINGUNO">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
       <Button fx:id="okcurso" layoutX="437.0" layoutY="175.0" mnemonicParsing="false" onAction="#handlerOK" prefHeight="25.0" prefWidth="73.0" text="OK" />
       <Button fx:id="verLista" layoutX="705.0" layoutY="258.0" mnemonicParsing="false" onAction="#handlerVerLista" prefHeight="33.0" prefWidth="127.0" text="Ver Lista" />
-      <ListView fx:id="lista" layoutX="70.0" layoutY="311.0" prefHeight="315.0" prefWidth="761.0" />
+      <TableView fx:id="table" layoutX="66.0" layoutY="319.0" prefHeight="368.0" prefWidth="253.0">
+        <columns>
+          <TableColumn fx:id="alumno" prefWidth="252.0" text="Alumno" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>

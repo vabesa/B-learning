@@ -68,8 +68,9 @@ public class horarioprofeBLearning {
     private Label labelcurso;
 
     @FXML
-    private void initialize(){
+    public void inicio(){
     	labelcurso.setText(mainGui.curso_en_linea.getNombre());
+    	curso.getItems().clear();
     	for (Curso c: mainGui.profesor_en_linea.getCursos()){
     		curso.getItems().addAll(c.getNombre());
     	}
@@ -77,7 +78,8 @@ public class horarioprofeBLearning {
 
     @FXML
     void handlerContenido(ActionEvent event) {
-
+    	mainGui.primaryStage.setScene(mainGui.scene_mensajeprofe);
+    	mainGui.mensajeprofe_bl.inicio();
     }
 
     @FXML
@@ -88,18 +90,21 @@ public class horarioprofeBLearning {
     @FXML
     void handlerContacto(ActionEvent event) {
     	mainGui.primaryStage.setScene(mainGui.scene_mensajeprofe);
+    	mainGui.mensajeprofe_bl.inicio();
 
     }
 
     @FXML
     void handlerNotas(ActionEvent event) {
     	mainGui.primaryStage.setScene(mainGui.scene_notasprofe);
+    	mainGui.notasprofe_bl.actualizar_lista();
 
     }
 
     @FXML
     void handlerCalendario(ActionEvent event) {
     	mainGui.primaryStage.setScene(mainGui.scene_calendarioprofe);
+    	mainGui.calendarioprofe_bl.inicio();
 
     }
 
@@ -111,17 +116,27 @@ public class horarioprofeBLearning {
     @FXML
     void handlerCerrar(ActionEvent event) {
     	mainGui.primaryStage.setScene(mainGui.scene_home);
+    	mainGui.primaryStage.setScene(mainGui.scene_home);
 
     }
 
     @FXML
     void handlerOK(ActionEvent event) {
-
+    	for (Curso c: mainGui.getProfesor_en_linea().getCursos()){
+    		if (curso.getValue() == c.getNombre()){
+    			mainGui.setCurso_en_linea(c);
+    		}
+    	}
+    	if (mainGui.getCurso_en_linea() != null){
+    		labelcurso.setText(mainGui.getCurso_en_linea().getNombre());
+    	}
+    	inicio();
     }
 
     @FXML
     void handlerLista(ActionEvent event) {
-
+    	mainGui.primaryStage.setScene(mainGui.scene_verlistaprofe);
+    	mainGui.verlistaprofe_bl.inicio();
     }
 
 }

@@ -13,31 +13,14 @@
          </font>
       </Label>
       <Separator layoutX="6.0" layoutY="151.0" prefHeight="1.0" prefWidth="1272.0" />
-      <Button fx:id="contenido" layoutX="70.0" layoutY="258.0" mnemonicParsing="false" onAction="#handlerContenido" prefHeight="33.0" prefWidth="127.0" text="Agregar Contenido" />
-      <Button fx:id="horario" layoutX="578.0" layoutY="258.0" mnemonicParsing="false" onAction="#handlerHorario" prefHeight="33.0" prefWidth="127.0" text="Horario" />
-      <Button fx:id="contacto" layoutX="451.0" layoutY="258.0" mnemonicParsing="false" onAction="#handlerContacto" prefHeight="33.0" prefWidth="127.0" text="Contacto" />
-      <Button fx:id="notas" layoutX="197.0" layoutY="258.0" mnemonicParsing="false" onAction="#handlerNotas" prefHeight="33.0" prefWidth="127.0" text="Subir Notas" />
-      <Button fx:id="calendario" layoutX="324.0" layoutY="258.0" mnemonicParsing="false" onAction="#handlerCalendario" prefHeight="33.0" prefWidth="127.0" text="Modificar Calendario" />
-      <Button fx:id="perfil" layoutX="957.0" layoutY="255.0" mnemonicParsing="false" onAction="#handlerPerfil" prefHeight="39.0" prefWidth="127.0" text="MI PERFIL" />
-      <Button fx:id="cerrar" layoutX="1084.0" layoutY="255.0" mnemonicParsing="false" onAction="#handlerCerrar" prefHeight="39.0" prefWidth="127.0" text="CERRAR CESION" />
-      <Label layoutX="70.0" layoutY="175.0" prefHeight="24.0" prefWidth="136.0" text="Selecciona un Curso:">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </Label>
-      <ComboBox fx:id="curso" layoutX="206.0" layoutY="175.0" prefHeight="25.0" prefWidth="202.0" />
-      <Label layoutX="66.0" layoutY="212.0" prefHeight="24.0" prefWidth="136.0" text="Curso Seleccionado:">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </Label>
-      <Label layoutX="206.0" layoutY="212.0" prefHeight="24.0" prefWidth="136.0" text="NINGUNO">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </Label>
-      <Button fx:id="okcurso" layoutX="437.0" layoutY="175.0" mnemonicParsing="false" onAction="#handlerOK" prefHeight="25.0" prefWidth="73.0" text="OK" />
-      <TableView fx:id="tabla" layoutX="79.0" layoutY="342.0" prefHeight="374.0" prefWidth="840.0">
+      <Button fx:id="contenido" layoutX="69.0" layoutY="188.0" mnemonicParsing="false" onAction="#handlerContenido" prefHeight="33.0" prefWidth="127.0" text="CONTENIDO" />
+      <Button fx:id="horario" layoutX="577.0" layoutY="188.0" mnemonicParsing="false" onAction="#handlerHorario" prefHeight="33.0" prefWidth="127.0" text="HORARIO" />
+      <Button fx:id="contacto" layoutX="450.0" layoutY="188.0" mnemonicParsing="false" onAction="#handlerContacto" prefHeight="33.0" prefWidth="127.0" text="CONTACTO" />
+      <Button fx:id="notas" layoutX="196.0" layoutY="188.0" mnemonicParsing="false" onAction="#handlerNotas" prefHeight="33.0" prefWidth="127.0" text="NOTAS" />
+      <Button fx:id="calendario" layoutX="323.0" layoutY="188.0" mnemonicParsing="false" onAction="#handlerCalendario" prefHeight="33.0" prefWidth="127.0" text="CALENDARIO" />
+      <Button fx:id="cerrar" layoutX="1083.0" layoutY="185.0" mnemonicParsing="false" onAction="#handlerCerrar" prefHeight="39.0" prefWidth="127.0" text="CERRAR CESION" />
+      <Button fx:id="perfil" layoutX="956.0" layoutY="185.0" mnemonicParsing="false" onAction="#handlerPerfil" prefHeight="39.0" prefWidth="127.0" text="MI PERFIL" />
+      <TableView fx:id="tabla" layoutX="69.0" layoutY="300.0" prefHeight="374.0" prefWidth="840.0">
          <columns>
             <TableColumn fx:id="lunes" prefWidth="120.0" text="Lunes" />
             <TableColumn fx:id="martes" prefWidth="120.0" text="Martes" />
@@ -50,3 +33,4 @@
       </TableView>
    </children>
 </AnchorPane>
+

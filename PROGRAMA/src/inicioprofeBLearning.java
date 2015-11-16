@@ -36,13 +36,19 @@ public class inicioprofeBLearning {
 
     @FXML
     private Button perfil;
-    
+
     @FXML
     private Label labelcurso;
-    
+
     @FXML
-    private void initialize(){
+    public void inicio(){
+    	if (mainGui.getCurso_en_linea() == null){
+    		labelcurso.setText("ninguno");
+    	}
+    	else if (mainGui.getCurso_en_linea() != null){
     	labelcurso.setText(mainGui.curso_en_linea.getNombre());
+    	}
+    	curso.getItems().clear();
     	for (Curso c: mainGui.profesor_en_linea.getCursos()){
     		curso.getItems().addAll(c.getNombre());
     	}
@@ -55,26 +61,37 @@ public class inicioprofeBLearning {
 
     @FXML
     void handlerHorario(ActionEvent event) {
-    	mainGui.primaryStage.setScene(mainGui.scene_horarioprofe);
+    	if (mainGui.getCurso_en_linea() != null){
+    		mainGui.primaryStage.setScene(mainGui.scene_horarioprofe);
+    		mainGui.horarioprofe_bl.inicio();
+    	}
+    	
+    	
 
     }
 
     @FXML
     void handlerContacto(ActionEvent event) {
+    	if (mainGui.getCurso_en_linea() != null){
     	mainGui.primaryStage.setScene(mainGui.scene_mensajeprofe);
-
+    	mainGui.mensajeprofe_bl.inicio();
+    	}
     }
 
     @FXML
     void handlerNotas(ActionEvent event) {
-    	mainGui.primaryStage.setScene(mainGui.scene_notasprofe);
-
+    	if (mainGui.getCurso_en_linea() != null){
+    		mainGui.primaryStage.setScene(mainGui.scene_notasprofe);
+    		mainGui.notasprofe_bl.actualizar_lista();
+    	}
     }
 
     @FXML
     void handlerCalendario(ActionEvent event) {
+    	if (mainGui.getCurso_en_linea() != null){
     	mainGui.primaryStage.setScene(mainGui.scene_calendarioprofe);
-
+    	mainGui.calendarioprofe_bl.inicio();
+    	}
     }
 
     @FXML
@@ -85,17 +102,32 @@ public class inicioprofeBLearning {
     @FXML
     void handlerCerrar(ActionEvent event) {
     	mainGui.primaryStage.setScene(mainGui.scene_home);
+    	mainGui.setProfesor_en_linea(null);
+    	mainGui.setCurso_en_linea(null);
 
     }
 
     @FXML
     void handlerOK(ActionEvent event) {
-
+    	for (Curso c: mainGui.getProfesor_en_linea().getCursos()){
+    		if (curso.getValue() == c.getNombre()){
+    			mainGui.setCurso_en_linea(c);
+    		}
+    	}
+    	if (mainGui.getCurso_en_linea() != null){
+    		labelcurso.setText(mainGui.getCurso_en_linea().getNombre());
+    	}
+    	else if (mainGui.getCurso_en_linea() == null){
+    		labelcurso.setText("ninguno");
+    	}
     }
 
     @FXML
     void handlerLista(ActionEvent event) {
-
+    	if (mainGui.getCurso_en_linea() != null){
+    	mainGui.primaryStage.setScene(mainGui.scene_verlistaprofe);
+    	mainGui.verlistaprofe_bl.inicio();
+    	}
     }
 
 }

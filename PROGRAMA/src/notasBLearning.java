@@ -51,33 +51,35 @@ public class notasBLearning {
     @FXML
     void handlerContenido(ActionEvent event) {
     	mainGui.primaryStage.setScene(mainGui.scene_contenido);
+    	mainGui.contenido_bl.inicio();
     }
 
     @FXML
-    public void initialize(){
+    public void inicio(){
+    	year.getItems().clear();
     	year.getItems().addAll("2015");
-    	year.getItems().addAll("2016");
+
     }
     @FXML
     void handlerHorario(ActionEvent event) {
-
+    	mainGui.primaryStage.setScene(mainGui.scene_horario);
+    	mainGui.horario_bl.inicio();
     }
 
     @FXML
     void handlerContacto(ActionEvent event) {
+    	mainGui.primaryStage.setScene(mainGui.scene_enviarmsj);
+    	mainGui.enviarmsj_bl.inicio();
 
     }
     public ObservableList<Nota> data = FXCollections.observableArrayList();
 
     @FXML
     void handlerAno(ActionEvent event) {
+    	data.clear();
     	curso.setCellValueFactory(
                 new PropertyValueFactory<Nota, String>("Materia"));
 
-    	//for (Nota n: mainGui.alumno_en_linea.getNotas()){
-    		//data.add(n);
-    	data.add(new Nota("matematicas"));
-    	data.get(0);
     	curso.setCellValueFactory(
                 new PropertyValueFactory<Nota, String>("Materia"));
     	for (Nota n: mainGui.alumno_en_linea.getNotas()){
@@ -102,6 +104,8 @@ public class notasBLearning {
 
     @FXML
     void handlerCalendario(ActionEvent event) {
+    	mainGui.primaryStage.setScene(mainGui.scene_calendario);
+    	mainGui.calendario_bl.inicio();
 
     }
 
@@ -112,6 +116,8 @@ public class notasBLearning {
 
     @FXML
     void handlerCerrar(ActionEvent event) {
+    	mainGui.primaryStage.setScene(mainGui.scene_home);
+    	mainGui.setAlumno_en_linea(null);
 
     }
 

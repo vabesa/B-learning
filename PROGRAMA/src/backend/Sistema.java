@@ -10,10 +10,11 @@ public class Sistema {
 		this.profes = new ArrayList<Profesor>();
 		this.niveles.add(new Nivel("8vo basico"));
 		this.niveles.add(new Nivel("7mo basico"));
-		this.profes.add(new Profesor("Shruti", "Matematicas","clave123","profe1"));
-		this.profes.add(new Profesor ("Leo", "Lenguaje","clave321","profe2"));
+		this.profes.add(new Profesor("Profesor de Matematica", "Matematicas","clave123","profe1"));
+		this.profes.add(new Profesor ("Profesor de Lenguaje", "Lenguaje","clave321","profe2"));
 		this.niveles.get(0).getCursos().add(new Curso(this.niveles.get(0), "Matematicas 7mo", this.profes.get(0)));
 		this.niveles.get(1).getCursos().add(new Curso(this.niveles.get(1), "Lenguaje 8vo", this.profes.get(1)));
+		this.niveles.get(1).getCursos().add(new Curso(this.niveles.get(1), "Matematicas 8vo", this.profes.get(0)));
 		this.niveles.get(0).getAlumnos().add(new Alumno("Ignacio Toresano", "13", this.niveles.get(0),"nacho123","itoresano"));
 		this.niveles.get(1).getAlumnos().add(new Alumno("ROlf heerwagen", "33", this.niveles.get(1),"rolf123","rheerwagen"));
 		this.niveles.get(0).getAlumnos().add(new Alumno("Vicente Besa", "13", this.niveles.get(0),"besa123","vabesa"));
@@ -24,6 +25,7 @@ public class Sistema {
 		this.niveles.get(0).getCursos().get(0).topicos.add(topico);
 		this.niveles.get(1).getCursos().get(0).topicos.add(topico2);
 		this.profes.get(0).getCursos().add(this.niveles.get(0).getCursos().get(0));
+		this.profes.get(0).getCursos().add(this.niveles.get(1).getCursos().get(1));
 		this.profes.get(1).getCursos().add(this.niveles.get(1).getCursos().get(0));
 
 

@@ -18,24 +18,24 @@ import javafx.scene.media.MediaView;
 
 public class contenidoBLearning {
 	public Nivel nivel;
-	public MediaPlayer mediaplayer = new MediaPlayer(new Media("file:///C:/Users/Vicente%20Besa/Documents/cancion.mp3"));
+	public MediaPlayer mediaplayer = new MediaPlayer(new Media("file:///C:/Users/Ignacio/Documents/GitHub/B-learning/cancion.mp3"));
 	public Topico topico;
 
     @FXML
     private Button play;
-    
+
     @FXML
     private Button pause;
-    
+
     @FXML
     private Button stop;
-    
+
     @FXML
     private VBox vboxql;
-    
+
     @FXML
     private MediaView mediaViw;
-	
+
     @FXML
     private ComboBox<String> cursos;
 
@@ -74,6 +74,7 @@ public class contenidoBLearning {
     @FXML
     void handlerHorario(ActionEvent event) {
     	mainGui.primaryStage.setScene(mainGui.scene_horario);
+    	mainGui.horario_bl.inicio();
     	mediaplayer.stop();
 
     }
@@ -81,6 +82,7 @@ public class contenidoBLearning {
     @FXML
     void handlerContacto(ActionEvent event) {
     	mainGui.primaryStage.setScene(mainGui.scene_enviarmsj);
+    	mainGui.enviarmsj_bl.inicio();
     	mediaplayer.stop();
 
     }
@@ -88,6 +90,7 @@ public class contenidoBLearning {
     @FXML
     void handlerNotas(ActionEvent event) {
     	mainGui.primaryStage.setScene(mainGui.scene_notas);
+    	mainGui.notas_bl.inicio();
     	mediaplayer.stop();
 
     }
@@ -95,6 +98,7 @@ public class contenidoBLearning {
     @FXML
     void handlerCalendario(ActionEvent event) {
     	mainGui.primaryStage.setScene(mainGui.scene_calendario);
+    	mainGui.calendario_bl.inicio();
     	mediaplayer.stop();
 
     }
@@ -122,25 +126,24 @@ public class contenidoBLearning {
     	mediaViw.setMediaPlayer(mediaplayer);
     	mediaViw.toFront();
 
-  
-    	
-    
+
+
+
     }
 
     @FXML
     void handlerCerrar(ActionEvent event) {
     	mainGui.primaryStage.setScene(mainGui.scene_home);
     	mediaplayer.stop();
-
+    	mainGui.setAlumno_en_linea(null);
     }
-    
-    public void initialize(){
-    	System.out.println(mainGui.alumno_en_linea.getNombre());
+
+    public void inicio(){
     	for (Nivel n: Sistema.getINSTANCE().getNiveles()){
     		if (n.equals(mainGui.alumno_en_linea.getNivel())){
     			this.nivel=n;
     		}
-			
+
 		}
     	cursos.getItems().clear();
     	for (Curso c: this.nivel.cursos){
@@ -162,9 +165,9 @@ public class contenidoBLearning {
 				}
 			}
 		});
-    	
+
     }
-    
+
 
     @FXML
     void play(ActionEvent event) {
@@ -179,7 +182,7 @@ public class contenidoBLearning {
     	mediaplayer.stop();
     	mainGui.primaryStage.setScene(mainGui.scene_pregunta);
     	mainGui.pregunta_bl.iniciar(topico);
-    	
+
 
     }
 

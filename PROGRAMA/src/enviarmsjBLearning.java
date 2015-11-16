@@ -41,10 +41,11 @@ public class enviarmsjBLearning {
     @FXML
     private ComboBox<String> destinatario;
     @FXML
-    public void initialize(){
-    	//mostardest();
+    public void inicio(){
+    	mostardest();
     }
     public void mostardest(){
+    	destinatario.getItems().clear();
     	for (Curso c: mainGui.alumno_en_linea.getNivel().getCursos()){
     		destinatario.getItems().add(c.profesor.getNombre());
     	}
@@ -52,30 +53,34 @@ public class enviarmsjBLearning {
     @FXML
     void handlerContenido(ActionEvent event) {
     	mainGui.primaryStage.setScene(mainGui.scene_contenido);
+    	mainGui.contenido_bl.inicio();
 
     }
 
     @FXML
     void handlerHorario(ActionEvent event) {
     	mainGui.primaryStage.setScene(mainGui.scene_horario);
+    	mainGui.horario_bl.inicio();
 
     }
 
     @FXML
     void handlerContacto(ActionEvent event) {
-    	mainGui.primaryStage.setScene(mainGui.scene_enviarmsj);
+
 
     }
 
     @FXML
     void handlerNotas(ActionEvent event) {
     	mainGui.primaryStage.setScene(mainGui.scene_notas);
+    	mainGui.notas_bl.inicio();
 
     }
 
     @FXML
     void handlerCalendario(ActionEvent event) {
     	mainGui.primaryStage.setScene(mainGui.scene_calendario);
+    	mainGui.calendario_bl.inicio();
 
     }
 
@@ -87,6 +92,7 @@ public class enviarmsjBLearning {
     @FXML
     void handlerCerrar(ActionEvent event) {
     	mainGui.primaryStage.setScene(mainGui.scene_home);
+    	mainGui.setAlumno_en_linea(null);
 
     }
 

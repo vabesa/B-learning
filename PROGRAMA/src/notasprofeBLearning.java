@@ -59,15 +59,13 @@ public class notasprofeBLearning {
     private ComboBox<String> curso;
 
     @FXML
-    public void initialize(){
-    	labelcurso.setText(mainGui.curso_en_linea.getNombre());
-    	for (Curso c: mainGui.profesor_en_linea.getCursos()){
-    		curso.getItems().addAll(c.getNombre());
+    public void inicio(){
+
+    	for(int i=10;i<71;i+=1){
+    		nota1.getItems().addAll(Double.toString(i/10.0));
+    		nota2.getItems().addAll(Double.toString(i/10.0));
     	}
-    	for(double i=1;i<7.1;i+=0.1){
-    		nota1.getItems().addAll(String.valueOf(i));
-    		nota2.getItems().addAll(String.valueOf(i));
-    	}
+    	alumno.getItems().clear();
     	for (Alumno a: mainGui.curso_en_linea.getNivel().getAlumnos()){
     		alumno.getItems().addAll(a.getNombre());
     	}
@@ -80,12 +78,22 @@ public class notasprofeBLearning {
     @FXML
     void handlerHorario(ActionEvent event) {
     	mainGui.primaryStage.setScene(mainGui.scene_horarioprofe);
+    	mainGui.horarioprofe_bl.inicio();
 
+    }
+    public void actualizar_lista(){
+    	inicio();
+    	labelcurso.setText(mainGui.curso_en_linea.getNombre());
+    	curso.getItems().clear();
+    	for (Curso c: mainGui.profesor_en_linea.getCursos()){
+    		curso.getItems().addAll(c.getNombre());
+    	}
     }
 
     @FXML
     void handlerContacto(ActionEvent event) {
     	mainGui.primaryStage.setScene(mainGui.scene_mensajeprofe);
+    	mainGui.mensajeprofe_bl.inicio();
 
     }
 
@@ -98,6 +106,7 @@ public class notasprofeBLearning {
     @FXML
     void handlerCalendario(ActionEvent event) {
     	mainGui.primaryStage.setScene(mainGui.scene_calendarioprofe);
+    	mainGui.calendarioprofe_bl.inicio();
 
     }
 
@@ -109,30 +118,35 @@ public class notasprofeBLearning {
     @FXML
     void handlerCerrar(ActionEvent event) {
     	mainGui.primaryStage.setScene(mainGui.scene_home);
+    	mainGui.setProfesor_en_linea(null);
+    	mainGui.setCurso_en_linea(null);
 
     }
 
     @FXML
     void handlerOK(ActionEvent event) {
-    	for (Curso c: mainGui.profesor_en_linea.getCursos()){
-    		if (c.getNombre() == curso.getValue()){
-    			mainGui.curso_en_linea = c;
+    	for (Curso c: mainGui.getProfesor_en_linea().getCursos()){
+    		if (curso.getValue() == c.getNombre()){
+    			mainGui.setCurso_en_linea(c);
     		}
     	}
-    	labelcurso.setText(mainGui.curso_en_linea.getNombre());
-
+    	if (mainGui.getCurso_en_linea() != null){
+    		labelcurso.setText(mainGui.getCurso_en_linea().getNombre());
+    	}
+    	actualizar_lista();
     }
 
     @FXML
     void handlerVerLista(ActionEvent event) {
-
+    	mainGui.primaryStage.setScene(mainGui.scene_verlistaprofe);
+    	mainGui.verlistaprofe_bl.inicio();
     }
 
     @FXML
     void handlerSubirNota(ActionEvent event) {
-    	for (Alumno a: mainGui.curso_en_linea.getNivel().getAlumnos()){
+    	for (Alumno a: mainGui.getCurso_en_linea().getNivel().getAlumnos()){
     		if (a.getNombre() == alumno.getValue()){
-    			mainGui.profesor_en_linea.ponerNota(Double.parseDouble(nota1.getValue()), mainGui.curso_en_linea, a);
+    			mainGui.getProfesor_en_linea().ponerNota(Double.parseDouble(nota1.getValue()), mainGui.getCurso_en_linea(), a);
     				}
     			}
     	alumno.getSelectionModel().clearSelection();

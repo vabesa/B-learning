@@ -51,19 +51,23 @@ public class mensajeprofeBLearning {
 
     @FXML
     private TextArea mensaje;
-    
+
     @FXML
     private Label labelcurso;
-    
+
     @FXML
-    private void initialize(){
+    public void inicio(){
     	labelcurso.setText(mainGui.curso_en_linea.getNombre());
+    	curso.getItems().clear();
     	for (Curso c: mainGui.profesor_en_linea.getCursos()){
     		curso.getItems().addAll(c.getNombre());
     	}
+    	destinatario.getSelectionModel().clearSelection();
+    	destinatario.getItems().clear();
     	for (Alumno a: mainGui.curso_en_linea.getNivel().getAlumnos()){
     		destinatario.getItems().addAll(a.getNombre());
     	}
+    	
     }
 
     @FXML
@@ -74,24 +78,26 @@ public class mensajeprofeBLearning {
     @FXML
     void handlerHorario(ActionEvent event) {
     	mainGui.primaryStage.setScene(mainGui.scene_horarioprofe);
+    	mainGui.horarioprofe_bl.inicio();
 
     }
 
     @FXML
     void handlerContacto(ActionEvent event) {
-    	mainGui.primaryStage.setScene(mainGui.scene_mensajeprofe);
 
     }
 
     @FXML
     void handlerNotas(ActionEvent event) {
     	mainGui.primaryStage.setScene(mainGui.scene_notasprofe);
+    	mainGui.notasprofe_bl.actualizar_lista();
 
     }
 
     @FXML
     void handlerCalendario(ActionEvent event) {
     	mainGui.primaryStage.setScene(mainGui.scene_calendarioprofe);
+    	mainGui.calendarioprofe_bl.inicio();
 
     }
 
@@ -103,15 +109,28 @@ public class mensajeprofeBLearning {
     @FXML
     void handlerCerrar(ActionEvent event) {
     	mainGui.primaryStage.setScene(mainGui.scene_home);
+    	mainGui.setProfesor_en_linea(null);
+    	mainGui.setCurso_en_linea(null);
 
     }
 
     @FXML
     void handlerOK(ActionEvent event) {
+    	for (Curso c: mainGui.getProfesor_en_linea().getCursos()){
+    		if (curso.getValue() == c.getNombre()){
+    			mainGui.setCurso_en_linea(c);
+    		}
+    	}
+    	if (mainGui.getCurso_en_linea() != null){
+    		labelcurso.setText(mainGui.getCurso_en_linea().getNombre());
+    	}
+    	inicio();
     }
 
     @FXML
     void handlerLista(ActionEvent event) {
+    	mainGui.primaryStage.setScene(mainGui.scene_verlistaprofe);
+    	mainGui.verlistaprofe_bl.inicio();
 
     }
 

@@ -11,9 +11,9 @@ import javafx.stage.Stage;
 
 public class mainGui extends Application{
 
-	public static Alumno alumno_en_linea = Sistema.getINSTANCE().getNiveles().get(0).getAlumnos().get(0);
-	public static Profesor profesor_en_linea = Sistema.getINSTANCE().getProfes().get(0);
-	public static Curso curso_en_linea = Sistema.getINSTANCE().getProfes().get(0).getCursos().get(0);
+	public static Alumno alumno_en_linea = null;
+	public static Profesor profesor_en_linea = null;
+	public static Curso curso_en_linea = null;
 	public static Stage primaryStage;
 
 	public static Parent home_Blearning;
@@ -189,6 +189,30 @@ public class mainGui extends Application{
 		primaryStage.setScene(scene_home);
 		primaryStage.show();
 
+	}
+
+	public static Alumno getAlumno_en_linea() {
+		return alumno_en_linea;
+	}
+
+	public static void setAlumno_en_linea(Alumno alumno_en_linea) {
+		mainGui.alumno_en_linea = alumno_en_linea;
+	}
+
+	public static Profesor getProfesor_en_linea() {
+		return profesor_en_linea;
+	}
+
+	public static void setProfesor_en_linea(Profesor profesor_en_linea) {
+		mainGui.profesor_en_linea = profesor_en_linea;
+	}
+
+	public static Curso getCurso_en_linea() {
+		return curso_en_linea;
+	}
+
+	public static void setCurso_en_linea(Curso curso_en_linea) {
+		mainGui.curso_en_linea = curso_en_linea;
 	}
 }
 
