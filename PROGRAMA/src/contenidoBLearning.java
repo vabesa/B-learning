@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 import backend.Curso;
 import backend.Nivel;
@@ -17,7 +18,18 @@ import javafx.scene.media.MediaView;
 
 public class contenidoBLearning {
 	public Nivel nivel;
-	MediaPlayer mediaplayer;
+	public MediaPlayer mediaplayer = new MediaPlayer(new Media("file:///C:/Users/Vicente%20Besa/Documents/cancion.mp3"));
+	public Topico topico;
+
+    @FXML
+    private Button play;
+    
+    @FXML
+    private Button pause;
+    
+    @FXML
+    private Button stop;
+    
     @FXML
     private VBox vboxql;
     
@@ -62,24 +74,28 @@ public class contenidoBLearning {
     @FXML
     void handlerHorario(ActionEvent event) {
     	mainGui.primaryStage.setScene(mainGui.scene_horario);
+    	mediaplayer.stop();
 
     }
 
     @FXML
     void handlerContacto(ActionEvent event) {
     	mainGui.primaryStage.setScene(mainGui.scene_enviarmsj);
+    	mediaplayer.stop();
 
     }
 
     @FXML
     void handlerNotas(ActionEvent event) {
     	mainGui.primaryStage.setScene(mainGui.scene_notas);
+    	mediaplayer.stop();
 
     }
 
     @FXML
     void handlerCalendario(ActionEvent event) {
     	mainGui.primaryStage.setScene(mainGui.scene_calendario);
+    	mediaplayer.stop();
 
     }
 
@@ -90,11 +106,13 @@ public class contenidoBLearning {
 
     @FXML
     void handlerBuscar(ActionEvent event) {
+    	mediaplayer.stop();
     	String ruta = "file:///C:/Users/Vicente%20Besa/Videos/DivX%20Movies/video.mp4";
     	for (Curso c:nivel.getCursos()){
     		for (Topico t:c.getTopicos()){
     			if (t.nombre.equals(topicos.getValue())){
     				ruta = t.ruta;
+    				this.topico = t;
     			}
     		}
     	}
@@ -103,7 +121,6 @@ public class contenidoBLearning {
     	mediaplayer = new MediaPlayer(videofile);
     	mediaViw.setMediaPlayer(mediaplayer);
     	mediaViw.toFront();
-    	mediaplayer.play();
 
   
     	
@@ -113,6 +130,7 @@ public class contenidoBLearning {
     @FXML
     void handlerCerrar(ActionEvent event) {
     	mainGui.primaryStage.setScene(mainGui.scene_home);
+    	mediaplayer.stop();
 
     }
     
@@ -146,6 +164,37 @@ public class contenidoBLearning {
 		});
     	
     }
+    
+
+    @FXML
+    void play(ActionEvent event) {
+    	mediaplayer.play();
+    	try {
+			TimeUnit.SECONDS.sleep(17);
+			System.out.println("se espero 15 segundos");
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	mediaplayer.stop();
+    	mainGui.primaryStage.setScene(mainGui.scene_pregunta);
+    	mainGui.pregunta_bl.iniciar(topico);
+    	
+
+    }
+
+    @FXML
+    void stop(ActionEvent event) {
+    	mediaplayer.stop();
+
+    }
+
+    @FXML
+    void pause(ActionEvent event) {
+    	mediaplayer.pause();
+
+    }
+
 
 }
 

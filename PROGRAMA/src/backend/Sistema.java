@@ -19,8 +19,10 @@ public class Sistema {
 		this.niveles.get(0).getAlumnos().add(new Alumno("Vicente Besa", "13", this.niveles.get(0),"besa123","vabesa"));
 		this.niveles.get(1).getAlumnos().add(new Alumno("Jorge Garcia-Huidobro", "14", this.niveles.get(1),"garcia123","jgarcia"));
 		this.niveles.get(0).getAlumnos().add(new Alumno("Juan Pablo Schele", "12", this.niveles.get(0),"schele123","jpschele"));
-		this.niveles.get(0).getCursos().get(0).topicos.add(new Topico("fracciones",this.niveles.get(0).getCursos().get(0) , "file:///C:/Users/Vicente%20Besa/Videos/DivX%20Movies/video2.mp4"));
-		this.niveles.get(1).getCursos().get(0).topicos.add(new Topico("Figuras literarias",this.niveles.get(1).getCursos().get(0) , "file:///C:/Users/Vicente%20Besa/Videos/DivX%20Movies/video.mp4"));
+		Topico topico = new Topico("fracciones",this.niveles.get(0).getCursos().get(0),"file:///C:/Users/Vicente%20Besa/Videos/DivX%20Movies/video3.mp4","7/8","1/2","3/4","1","¿Cuanto es 1/2+3/8?");
+		Topico topico2 = new Topico("Funciones del lenguaje",this.niveles.get(1).getCursos().get(0),"file:///C:/Users/Vicente%20Besa/Videos/DivX%20Movies/video.mp4","Metalinguistica","Comparacion","Conativa","Factica","La pregunta ¿Qué significa la palabra canalla? Corresponde a la funcion del lenguaje:");
+		this.niveles.get(0).getCursos().get(0).topicos.add(topico);
+		this.niveles.get(1).getCursos().get(0).topicos.add(topico2);
 		this.profes.get(0).getCursos().add(this.niveles.get(0).getCursos().get(0));
 		this.profes.get(1).getCursos().add(this.niveles.get(1).getCursos().get(0));
 

@@ -85,6 +85,11 @@ public class mainGui extends Application{
 	public static FXMLLoader loader_signin = new FXMLLoader();
 	public static signinBLearning signin_bl;
 	public static Scene scene_signin;
+	
+	public static Parent pregunta_Blearning;
+	public static FXMLLoader loader_pregunta = new FXMLLoader();
+	public static preguntaBLearning pregunta_bl;
+	public static Scene scene_pregunta;
 
 	public static void main(String[] args){
 		launch(args);
@@ -163,6 +168,11 @@ public class mainGui extends Application{
 		signin_Blearning = (Parent) loader_signin.load();
 		signin_bl = loader_signin.getController();
 		scene_signin = new Scene(signin_Blearning);
+		
+		loader_pregunta.setLocation(mainGui.class.getResource("contenidopregunta.fxml"));
+		pregunta_Blearning = (Parent) loader_pregunta.load();
+		pregunta_bl = loader_pregunta.getController();
+		scene_pregunta = new Scene(pregunta_Blearning);
 
 
 
